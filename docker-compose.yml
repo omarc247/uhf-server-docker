@@ -7,13 +7,13 @@ services:
     restart: unless-stopped
 
     volumes:
-      # Persist recordings and database
+       Persist recordings and database
       - ./uhf-data:/var/lib/uhf-server
 
       # OPTIONAL: store recordings in a different location
       # Uncomment the line below IN ADDITION to the one above
       # This overrides only /recordings inside the container
-      # - ./uhf-recordings:/var/lib/uhf-server/recordings
+       - ./uhf-recordings:/var/lib/uhf-server/recordings
 
     ports:
       - 8000:8000  # <HOST>:<CONTAINER>
